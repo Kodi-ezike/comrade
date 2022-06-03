@@ -6,7 +6,7 @@
     font-family: 'Inter', sans-serif;
 }
 .education{
-    padding: 2rem 8rem 6rem 6rem;
+    padding: 2rem 8rem 4rem 6rem;
 }
 .education h1,.education h2{
     margin: 40px 0 20px;
@@ -29,7 +29,7 @@
 .board{
     height: 500px;
     
-    margin: 2rem 6rem;
+    margin: 4rem 6rem;
     background-color: #00874A;
     border-radius: 10px;
     display: flex;
@@ -41,15 +41,28 @@
     width: 50%;
 }
 .content{
-    margin: 4rem;
+    padding: 4rem;
+    color: white;
 }
 .content h1{
-    line-height: 66px;
+    margin:15px 0 30px;
 }
 .content p{
    width: 80%;
    line-height: 24px;
-   margin-bottom: 24px;
+   margin-bottom: 30px;
+}
+.content button{
+    width: 150px;
+    height: 50px;
+    color: #00874A;
+    background-color: white;
+    border: 1px solid #00874A;
+    outline: 1px solid #00874A;
+    border-radius: 5px;
+}
+.content button:active{
+    background-color: #ddf8ec;
 }
 .ellipse,.rectangle{
     height: 120px;
@@ -60,29 +73,89 @@
     bottom: 0;
     left: 0;
 }
+#mobile-voice{
+    display: none;
+}
 .voice{
     width: 50%;
     height: 500px;
+    position: relative;
 }
+
 .voice img{
     width: 500px;
     height: 500px;
-    
 }
 
 
 
-
+@media screen and (max-width: 1024px){
+    .voice img{
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        bottom: 0;
+    }
+    
+}
 
 
 @media screen and (max-width: 768px){
     .education{
         padding:2rem 4rem ;
     }
+    .board{
+        display: block;
+        height: 750px;
+        margin:2rem 4rem ;
+    }
+    .vote{
+        width: 100%;
+        height: 750px;
+    }
+    .voice{
+        display: none;
+    }
+    #mobile-voice{
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: auto;
+    }
+    .content{
+        text-align: center;
+    }
+    .content h1{
+        margin: 30px 0;
+    }
+    .content p{
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 500px){
     .education{
         padding:2rem ;
+    }
+    .rectangle,.ellipse{
+        height: 100px;
+    }
+    .board{
+        margin: 2rem;
+    }
+    .content{
+        padding: 4rem 2rem;
+    }
+    #mobile-voice{
+        width: 80%;
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    #mobile-voice{
+        width: 95%;
+      
     }
 }
